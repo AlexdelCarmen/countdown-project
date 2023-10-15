@@ -8,13 +8,123 @@
 :root {
   --font-size: 16px;
   --subtitle-font-size: 18px;
-  --title-font-size: 22px;
+  --title-font-size: 26px;
   --accent-color1: #2e4374;
   --accent-color2: #071952;
   --dark-color1: #040d12;
+  --light-color1: #eeeded;
   --main-font: "Roboto", sans-serif;
   --regular-weight: 400;
   --semi-bold: 500;
   --bold: 700;
 }
 
+body {
+  font-family: var(--main-font);
+  background-color: var(--light-color1);
+}
+
+.timer-component {
+  display: flex;
+  flex-direction: column;
+  max-width: 375px;
+  margin: 0 auto;
+  align-items: center;
+  justify-content: center;
+}
+
+.timer-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.phone-img {
+  max-width: 375px;
+  display: block;
+  width: 100%;
+  object-fit: cover;
+}
+
+.timer-title {
+  text-align: center;
+  color: var(--accent-color2);
+  font-weight: var(--bold);
+  text-transform: uppercase;
+  letter-spacing: 5px;
+  font-size: var(--title-font-size);
+}
+
+.timer-subtitle {
+    font-weight: var(--semi-bold);
+    font-size: var(--subtitle-font-size);
+    letter-spacing: 2px;
+    margin: 0.5rem 0;
+}
+
+.timer-paragraph {
+    color: var(--accent-color1);
+    font-size: var(--main-font);
+    max-width: 375px;
+}
+
+.timer-display {
+    margin: 1rem 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;    
+}
+
+.timer {
+    color: var(--light-color1);
+    background-color: var(--dark-color1);
+    width: 80px;
+    height: 80px; 
+    margin: 0 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.timer > span {
+    font-size: var(--title-font-size);
+    font-weight: var(--semi-bold);
+}
+
+.timer-meassure {
+    font-size: var(--font-size);
+    text-transform: uppercase;
+}
+
+.photo-credits {
+  font-size: 8px;
+  margin-top: 10rem;
+}
+
+@media screen and (min-width: 700px) {
+
+  body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100svh;
+  }
+
+  .timer-component {
+    flex-direction: row;
+    max-width: 75%;
+  }
+
+  .photo-credits {
+    position: absolute;
+    bottom: 5%;
+  }
+
+  .phone-img {
+    max-width: 500px;
+  }
+
+}
